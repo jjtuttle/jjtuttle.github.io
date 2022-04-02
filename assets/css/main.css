@@ -72,6 +72,42 @@ input, select, textarea {
 	appearance: none;
 }
 
+.image-self > img {
+	width:200px;
+	height:200px;
+	border-radius: 999px;
+	margin:40px;
+	border:5px solid white;
+}
+
+.react > img {
+	/* background-color:white; */
+
+}
+
+.node > img {
+	/* background-color:white; */
+	width:100px;
+}
+
+.js > img {
+	/* background-color:white; */
+	width:100px;
+}
+
+.tech-icons > img {
+	height:100px;
+	border-radius:5px;
+	/* box-shadow: 1px 2px 3px lightgrey; */
+    cursor:pointer;
+}
+
+.tech-icons > img:hover {
+	transform:scale(1.02);
+	opacity: 0.8;
+}
+
+
 /* Basic */
 
 	@-ms-viewport {
@@ -2487,9 +2523,11 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ed4933;
+			background-color: white;
+			background-color:transparent !important;
 			box-shadow: none !important;
-			color: #ffffff !important;
+			/* color: #ef5e4a !important; */
+			border: 0.5px solid #ef5e4a;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2498,6 +2536,7 @@ input, select, textarea {
 			button.primary:hover,
 			.button.primary:hover {
 				background-color: #ef5e4a !important;
+				color:#ffffff !important;
 			}
 
 			input[type="submit"].primary:active,
@@ -2669,22 +2708,65 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		
 	}
 
-		.spotlight .image {
+	.spotlight .image {
 			-moz-order: 1;
 			-webkit-order: 1;
 			-ms-order: 1;
 			order: 1;
 			border-radius: 0;
 			width: 40%;
+			/* background-color: rgba(0, 0, 0, 0.5); */
 		}
 
-			.spotlight .image img {
+		.spotlight .image img {
 				border-radius: 0;
 				width: 100%;
+				/* opacity: 0.5; */
 			}
 
+
+	.spotlight1 {
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		/* background:url("/assets/css/images/jambook-wall.png"); */
+	}
+
+		.spotlight1 .image {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 40%;
+			
+			/* background-color: rgba(0, 0, 0, 0.5); */
+		}
+
+			.spotlight1 .image img {
+				border-radius: 0;
+				width:100%;
+				/* opacity: 0.5; */
+			}
+
+			/* #jambook {
+				filter:blur(2px);
+			}
+
+			#jambook:hover {
+				filter:blur(0.0);
+				cursor:pointer;
+			} */
+
+/* Content for spotlight showing projects text areas */
 		.spotlight .content {
 			padding: 2em 4em 0.1em 4em ;
 			-moz-order: 2;
@@ -2693,6 +2775,7 @@ input, select, textarea {
 			order: 2;
 			max-width: 48em;
 			width: 60%;
+			color:rgb(207, 206, 206);
 		}
 
 		.spotlight:nth-child(2n) {
@@ -2764,8 +2847,10 @@ input, select, textarea {
 					display: none;
 				}
 
-				.spotlight .image {
+				.spotlight .image  {
 					width: 100%;
+					opacity: 0.8;
+					/* background-image:url("/assets/css/images/jambook-wall.png") */
 				}
 
 				.spotlight .content {
@@ -2815,10 +2900,10 @@ input, select, textarea {
 		.wrapper.alt {
 			padding: 0;
 		}
-
+/* technologies icons */
 		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c8ece9;
+			background-color: #99f0e957;
+			color: #e1f4f2;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2836,7 +2921,7 @@ input, select, textarea {
 			.wrapper.style1 blockquote {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
-
+/* Tech icons h2 bottom line */
 			.wrapper.style1 code {
 				background: rgba(255, 255, 255, 0.075);
 			}
@@ -2846,7 +2931,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
-				border-color: rgba(0, 0, 0, 0.125);
+				border-color: rgba(249, 249, 249, 0.81);
 			}
 
 			.wrapper.style1 header.major p {
@@ -2999,7 +3084,7 @@ input, select, textarea {
 			.wrapper.style3 blockquote {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
-
+/* border color for h2 line */
 			.wrapper.style3 code {
 				background: rgba(255, 255, 255, 0.075);
 			}
@@ -3009,7 +3094,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style3 header.major h2, .wrapper.style3 header.major h3, .wrapper.style3 header.major h4, .wrapper.style3 header.major h5, .wrapper.style3 header.major h6 {
-				border-color: rgba(0, 0, 0, 0.125);
+				/* border-color: rgba(0, 0, 0, 0.125); */
 			}
 
 			.wrapper.style3 header.major p {
@@ -3840,6 +3925,13 @@ input, select, textarea {
 			#main > header p a {
 				color: inherit;
 			}
+/* background wrapper at header */
+			.header-bg {
+				background: rgba(0, 0, 0, 0.2);
+   				border-radius: 5px;
+				   padding: 20px;
+				   margin:20px;
+			}
 
 		@media screen and (max-width: 1680px) {
 
@@ -3891,7 +3983,7 @@ input, select, textarea {
 	}
 
 		#footer .icons {
-			font-size: 1.25em;
+			font-size: 1.85em;
 		}
 
 			#footer .icons a {
@@ -3899,7 +3991,9 @@ input, select, textarea {
 			}
 
 				#footer .icons a:hover {
-					color: #fff;
+					/* color: #fff; */
+					/* color:#ef5e4a; */
+					color: #00ffcc;
 				}
 
 		#footer .copyright {
@@ -3932,6 +4026,14 @@ input, select, textarea {
 					#footer .copyright li a:hover {
 						color: #fff;
 					}
+/* Contact me Form */
+
+form{
+	padding:20px;
+	margin:20px;
+}
+
+
 
 				@media screen and (max-width: 480px) {
 
